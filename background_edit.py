@@ -37,8 +37,8 @@ output_dir = "80_background_edit"  # Replace with your output directory
 os.makedirs(output_dir, exist_ok=True)
 
 # Parameters for brightness and contrast adjustment
-g_in_min, g_in_max, g_out_min, g_out_max = 0, 0.24, 0, 0.84
-r_in_min, r_in_max, r_out_min, r_out_max = 0.1, 0.6, 0.0, 1
+g_in_min, g_in_max, g_out_min, g_out_max = 0, 0.24, 0, 0.84  # these values are chosen with lab researchers based on their requirement
+r_in_min, r_in_max, r_out_min, r_out_max = 0.1, 0.6, 0.0, 1 # these values are chosen with lab researchers based on their requirement
 
 # Iterate through subfolders
 for subfolder in os.listdir(input_dir):
