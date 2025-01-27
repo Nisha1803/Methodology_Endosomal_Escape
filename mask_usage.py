@@ -15,15 +15,6 @@ from contour_mask import interect, create_mask  # Import your processing functio
 
 
 # # for edited images
-
-
-# # Define input and output directories for 40
-# input_dir1 = "C:\\Users\\fnisha\\Box\\AB-Cook-Nisha Research\\unedited_ovary\\40 10.11.24"  # for raw image
-# input_dir2 = "C:\\Users\\fnisha\\Box\\AB-Cook-Nisha Research\\data_ovary\\new_40" #for edited image
-# output_dir1 = "40\\40_raw_image_output_folder"  # output for raw image
-# output_dir2 = "40\\40_edited_images"  # output for edited
-
-
 # Define input and output directories for 80
 input_dir1 = "C:\\Users\\fnisha\\Box\\AB-Cook-Nisha Research\\unedited_ovary\\80"  # for raw image
 input_dir2 = "C:\\Users\\fnisha\\Box\\AB-Cook-Nisha Research\\data_ovary\\80.0" #for edited image
