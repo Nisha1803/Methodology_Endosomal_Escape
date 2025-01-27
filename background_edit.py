@@ -1,15 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
-
-
-
-# In[22]:
-
-
 import os
 import numpy as np
 import matplotlib.pyplot as plt
@@ -95,9 +86,6 @@ for subfolder in os.listdir(input_dir):
             # Reset images for the next pair
             green_image = None
             red_image = None
-
-
-# In[ ]:
 
 
 
