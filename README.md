@@ -44,5 +44,5 @@ Simulations are performed using a Stochastic Simulation Algorithm (SSA) model. T
 # Requirements
 To run this pipeline, you need the following:
 1) Python 3.8.19
-2) Required libraries: numpy, matplotlib, scipy, pandas, opencv-python and more information on version in available in package_version.py file.
+2) Required libraries: numpy, matplotlib, scipy, pandas, opencv-python and more information on version in available in package_requirements.txt file.
 3) Image processing tools compatible with microscopy images
