@@ -1,7 +1,7 @@
-Image Analysis and Simulation Pipeline
+## Image Analysis and Simulation Pipeline
 This repository contains scripts and tools for a comprehensive pipeline to analyze fluorescent microscopy images, generate simulations, and perform sensitivity analysis. Below is an overview of the included files and a step-by-step guide to using the pipeline.
 
-Repository Contents
+# Repository Contents
 README.md: Documentation for understanding and using the pipeline.
 SSA_simulation.py: Script for running simulations using a Stochastic Simulation Algorithm (SSA).
 background_edit.py: Script to preprocess and edit the background of microscopy images.
