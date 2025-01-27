@@ -31,10 +31,7 @@ Step 4: Extracting Pixels (extract_pixels.py)
 This step extracts pixel-level information from the intersected regions of the images saved in Step 3. The pixel data is essential for further computational modeling and analysis.
 
 Step 5: SSA Simulation (SSA_simulation.py)
-Simulations are performed using a Stochastic Simulation Algorithm (SSA) model. This step models the biological processes and interactions captured in the microscopy images.
-
-Step 6: Sensitivity Analysis
-The final step involves performing sensitivity analysis using Sobol and FAST (Fourier Amplitude Sensitivity Test) methods. These techniques help identify key parameters and assess their impact on the simulation outputs.
+Simulations are performed using a Stochastic Simulation Algorithm (SSA) model. This step models the biological processes and interactions captured in the microscopy images. Sensitivity analysis using Sobol and FAST (Fourier Amplitude Sensitivity Test) methods. These techniques help identify key parameters and assess their impact on the simulation outputs.
 
 # How to Use
 1) Preprocess images using background_edit.py to edit the backgrounds.
@@ -44,9 +41,8 @@ The final step involves performing sensitivity analysis using Sobol and FAST (Fo
 5) Run simulations using SSA_simulation.py to model biological interactions.
 6) Perform sensitivity analysis using the included methods to identify critical parameters.
 
-Requirements
+# Requirements
 To run this pipeline, you need the following:
-
-Python 3.x
-Required libraries: numpy, matplotlib, scipy, pandas, opencv-python
-Image processing tools compatible with microscopy images
+1) Python 3.8.19
+2) Required libraries: numpy, matplotlib, scipy, pandas, opencv-python and more information on version in available in package_version.py file.
+3) Image processing tools compatible with microscopy images
