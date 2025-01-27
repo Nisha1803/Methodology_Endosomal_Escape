@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[25]:
-
-
 from __future__ import division, print_function, absolute_import
 from importnb import Notebook
 with Notebook():
@@ -18,8 +15,6 @@ from contour_mask import interect, create_mask  # Import your processing functio
 
 
 # # for edited images
-
-# In[28]:
 
 
 # # Define input and output directories for 40
@@ -293,10 +288,5 @@ for folder_name in os.listdir(input_dir3):  # Iterate through folders in input_d
                 print(f"Processed image saved to: {output_image_path}")
             except Exception as e:
                 print(f"Error saving processed image to {output_image_path}: {e}")
-
-
-# In[ ]:
-
-
 
 
