@@ -24,10 +24,6 @@ output_dir2 = "80\\80_edited_images"  # output for edited
 output_dir3 = "80\\80_background_edit"  # output for edited
 mask_output_dir = "80_mask"
 
-
-# In[68]:
-
-
 import matplotlib.pyplot as plt
 
 print("Generating masks from:", input_dir1)
@@ -38,7 +34,6 @@ for folder_name in os.listdir(input_dir1):
         continue
 
     for file_name in os.listdir(input_folder):
-        # if file_name.endswith("_Z001_Overlay.tif"): #for 40
         if file_name.endswith("_Z002_Overlay.tif"): #for 80
             image_path = os.path.join(input_folder, file_name)
 
@@ -46,12 +41,7 @@ for folder_name in os.listdir(input_dir1):
                 # Load image and generate mask
                 image = imread(image_path)
                 print(f"Generating mask for: {image_path}")
-                # if image.dtype != 'float32':
-                #     image = image / 255.0  # Ensure image is in the [0, 1] range
-
-                # # Step 1: Brightness adjustment
-                # image = exposure.rescale_intensity(image, in_range=(0.4, 1), out_range=(0.1, 0.9))
-                # # image=image*255
+                
                 mask = interect(image, 100)  # Generate mask interactively
             except Exception as e:
                 print(f"Error generating mask for {image_path}: {e}")
@@ -87,10 +77,6 @@ for folder_name in os.listdir(input_dir1):
                 print(f"Mask saved to: {mask_output_path}")
             except Exception as e:
                 print(f"Error saving mask to {mask_output_path}: {e}")
-
-
-# In[76]:
-
 
 # Step 2: Apply Masks to Input Directory 2
 print("Applying masks to:", input_dir2)
@@ -145,11 +131,6 @@ for folder_name in os.listdir(input_dir2):  # Iterate through folders in input_d
                 print(f"Error saving processed image to {output_image_path}: {e}")
 
 
-# # for raw images
-
-# In[11]:
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 from skimage import io, filters, restoration, exposure
@@ -178,20 +159,14 @@ for folder_name in os.listdir(input_dir1):  # Iterate through folders in input_d
     mask_path = os.path.join(mask_folder, mask_files[0])  # Get the single mask file
 
     for file_name in os.listdir(input_folder):  # Iterate through files in the input folder
-        
-        # if file_name.endswith("XY01_Z001_Overlay.tif"):  # Match image files for 40
+    
         if file_name.endswith("XY01_Z002_Overlay.tif"):  # Match image files for 40
             image_path = os.path.join(input_folder, file_name)
 
             try:
                 # Load the image and the mask
                 image = imread(image_path)
-                # if image.dtype != 'float32':
-                #     image = image / 255.0  # Ensure image is in the [0, 1] range
-
-                # # Step 1: Brightness adjustment
-                # image = exposure.rescale_intensity(image, in_range=(0.4, 1), out_range=(0.1, 0.9))
-                # image=image*255.0
+               
                 mask = imread(mask_path)
                 print(f"Applying mask from {mask_path} to {image_path}")
 
@@ -211,12 +186,6 @@ for folder_name in os.listdir(input_dir1):  # Iterate through folders in input_d
                 print(f"Processed image saved to: {output_image_path}")
             except Exception as e:
                 print(f"Error saving processed image to {output_image_path}: {e}")
-
-
-# # for background edit image
-
-# In[41]:
-
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -247,19 +216,13 @@ for folder_name in os.listdir(input_dir3):  # Iterate through folders in input_d
 
     for file_name in os.listdir(input_folder):  # Iterate through files in the input folder
         
-        # if file_name.endswith("XY01_Z001_Overlay.tif"):  # Match image files for 40
         if file_name.endswith("combined.tif"):  # Match image files for 80
             image_path = os.path.join(input_folder, file_name)
 
             try:
                 # Load the image and the mask
                 image = imread(image_path)
-                # if image.dtype != 'float32':
-                #     image = image / 255.0  # Ensure image is in the [0, 1] range
-
-                # # Step 1: Brightness adjustment
-                # image = exposure.rescale_intensity(image, in_range=(0.4, 1), out_range=(0.1, 0.9))
-                # image=image*255.0
+              
                 mask = imread(mask_path)
                 print(f"Applying mask from {mask_path} to {image_path}")
 
