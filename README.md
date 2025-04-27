@@ -48,4 +48,4 @@ To run this pipeline, you need the following:
 3) Image processing tools compatible with microscopy images
 
 # Link to Data
-https://clemson.box.com/s/c814etejeqjhy48pxrcit3rkwghfui8h
+https://doi.org/10.5281/zenodo.15288765
